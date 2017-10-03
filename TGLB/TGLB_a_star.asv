@@ -1,0 +1,45 @@
+function steps=TGLB_a_star(stateInitial)
+steps=[];
+field1='state';
+field2='steps';
+value1=stateInitial;
+value2=[];
+initialNode=struct(field1,value1,field2,value2);
+frontier=[initialNode];
+closedList=[];
+while length(frontier)>0
+    
+    min=frontier(1).cost;
+    ind=1;
+    for i=2:length(frontier)
+        v=frontier(i);
+        if v.cost<min
+            ind=i;
+            min=v.cost;
+        end
+    end
+    temp=frontier(1);
+    frontier(1)=frontier(ind);
+    frontier(ind)=temp;
+    t=frontier(1);
+    
+    frontier=[frontier(2:length(frontier))];
+    
+    
+    i=0;
+    i=goalCheck(t.state);
+    if i==1
+        steps=t.steps;
+        break;
+    end
+    
+    closedList=[closedList t];
+    
+    x1=t;
+    x1.state=move_empty(x1.state);
+    val=dangerCheck(x1.state);
+    if(val==0)
+    hx=bit(x1.state);
+    
+end
+end

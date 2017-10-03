@@ -1,0 +1,4 @@
+function nodeOut=move_goat(nodeIn)
+    nodeOut=nodeIn;
+    
+end
