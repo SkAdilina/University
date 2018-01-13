@@ -14,7 +14,7 @@ I have used to different approach to solve the problem
 2) A* algorithm
 
 Solution Explanation
-0 -> move empty boat (not taking tiger.goat/leaf)
+0 -> move empty boat (not taking tiger,goat/leaf)
 1 -> move tiger
 2 -> move goat
 3 -> move leaf
