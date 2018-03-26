@@ -2,7 +2,7 @@ This is a small project that I did for my Artificial Intelligence course in my 3
 
 Project:
 - Enter any sentence/text of any length.
-- Click "Span or not?" button.
+- Click "Spam or not?" button.
 - Pop up message to show whether the text is a spam or not.
 
 The code can:
